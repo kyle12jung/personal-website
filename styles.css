@@ -142,6 +142,7 @@ button:focus {
     margin-left: 15%;
     margin-top: 5%;
     padding: 20px;
+    overflow-y: auto;
 }
 
 .project {
@@ -157,7 +158,14 @@ button:focus {
 
 #quotepop-button {
     display: block;
-    margin-top: -50px;
+    margin-top: -100px;
+}
+
+#nu-eats {
+    width: 40%;
+}
+#nu-eats-button {
+    display: block;
 }
 
 

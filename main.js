@@ -9,7 +9,7 @@ seeDetails1.addEventListener('click', () => {
     }
 })
 
-const seeDetails2 = document.querySelector('#project-header-2').children[1]
+const seeDetails2 = document.querySelector('#project-header-2').children[2]
 seeDetails2.addEventListener('click', () => {
     if (seeDetails2.innerHTML === "See Details") {
         document.querySelector('#project-description-2').style.display = 'block';
