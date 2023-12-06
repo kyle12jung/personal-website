@@ -2,29 +2,164 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
     <title>Kyle's Website</title>
 </head>
 
-<body class="main">
-    <header>
-        <div class="header-name" id="main">
+<body>
+    <header class="header">
+        <div class="container">
             <h1>Kyle Jung</h1>
+            <nav class="navigation">
+                <a href="#about">About Me</a>
+                <a href="#work-experience">Work Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#resume">Resume</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
-        <nav class="navigation-home" id="main">
-            <a href="/personal-website/about.html">About Me</a>
-            <a href="/personal-website/projects.html">Projects</a>
-            <a href="/personal-website/resume.html">Resume</a>
-            <a href="/personal-website/contact.html">Contact</a>
-        </nav>
     </header>
 
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About</h2>
+            <div class="bio">
+                <div class="bio-image">
+                    <img src="headshot.jpeg" alt="profile-picture">
+                </div>
+                <div class="bio-text">
+                    <p>My name is Kyle Jung, and I'm pursuing a B.S./M.S. (combined degree) in Computer Science at Northwestern University. I am passionate about coding for social good and creating software that could positively impact the world. My main areas of focus are full-stack development, computer networking, and AI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work-experience" class="work-experience">
+        <div class="container">
+            <h2>Work Experience</h2>
+
+            <div class="job" id="job-1">
+                <div class="job-header">
+                    <h3>Software Engineer - AIX Business Consulting</h3>
+                    <p>Remote | September 2023 – Present</p>
+                </div>
+                <div class="job-description" id="job-description-1">
+                    <ul>
+                        <li>Contract-based dev team proficient in custom software development services to diverse clients.</li>
+                        <li>Engineered an algorithm to automate the dispensing system for Burnsed Trucking, resulting in daily cost savings exceeding $5000 (Tech Stack: React, Flask, PostgreSQL, AWS RDS, AWS Elasticbeanstalk)</li>
+                        <li>Leading the development of a real-time tracking server for Burnsed Trucking, aimed at providing comprehensive metric analysis for trucks and drivers to enhance operational efficiency</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job" id="job-2">
+                <div class="job-header">
+                    <h3>Research Associate - Northwestern University C3 Lab</h3>
+                    <p>Evanston, IL | January 2023 – September 2023</p>
+                </div>
+                <div class="job-description" id="job-description-2">
+                    <ul>
+                        <li>Developed a natural language classifier that translates utterances for Satyrn, a language model that allows users to investigate and analyze structured data using plain language queries.</li>
+                        <li>Created Elizabeth, a Generative AI digital avatar capable of conversing with humans on Zoom, by building the content generation engine using AWS Comprehend and GPT 3.5 – showcased at Chicago Innovation's "AI vs. IQ" virtual event by Professor Kristian J. Hammond</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job" id="job-3">
+                <div class="job-header">
+                    <h3>Software Engineering Intern - Unfound</h3>
+                    <p>Chicago, IL | June 2022 – December 2022</p>
+                </div>
+                <div class="job-description" id="job-description-3">
+                    <ul>
+                        <li>Developed and deployed the map page feature of Unfound, a mobile app for sharing and discovering unique places</li>
+                        <li>Implemented core features on the frontend including pins, cards for each pin, real-time user location tracking, sidebar filter, search bar, etc, using React Native with Mapbox and TypeScript</li>
+                        <li>Optimized the pin load time by 78% by using memoization and caching data</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+
+            <div class="project" id="project-1">
+                <div class="project-header">
+                    <h3>DPDNS: Query Obfuscation for DNS Privacy Protection</h3>
+                </div>
+                <div class="project-description" id="project-description-1">
+                    <ul>
+                        <li>Developed a novel, privacy-preserving architecture using differential privacy in DNS queries to address the problem of public DNS resolvers having access to individual user queries – pending acceptance to The ACM conference</li>
+                        <li>DPDNS obfuscates real user queries by injecting specific noisy queries – user-side solution that leverages the strong privacy model of Local Differential Privacy</li>
+                        <li>Our experiments simulate adversarial attacks using both unsupervised and supervised machine learning algorithms to identify real user queries on a real-world DNS dataset – the precision of the classifiers in identifying user queries dropped from 90% to 24%</li>
+                        <li>Configured a local DNS resolver using BIND 9 on Ubuntu to collect and analyze the query logs for evaluation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project" id="project-2">
+                <div class="project-header">
+                    <h3>ResponseGenie (React, Flask, sklearn, MongoDB, Firebase)</h3>
+                </div>
+                <div class="project-description" id="project-description-2">
+                    <ul>
+                        <li>Created a full-stack web application that uses machine learning (K-Nearest Neighbor) to generate automatic canned responses for client email inquiries for LCBH (Law Center for Better Housing) paralegals to eliminate the process of finding relevant legal information to inquiries and integrated it into HelpScout (help desk software).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project" id="project-3">
+                <div class="project-header">
+                    <h3>HomeHop (React Native, Express.js, AWS S3, AWS Elasticbeanstalk, MongoDB)</h3>
+                </div>
+                <div class="project-description" id="project-description-3">
+                    <ul>
+                        <li>Created HomeHop, a full-stack mobile application for easy student subletting and apartment searching</li>
+                        <li>Leveraged Redux for global state management and used JSON Web Tokens for secure user authentication</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="resume">
+        <div class="container">
+            <h2>Resume</h2>
+            <iframe src="./Resume.pdf" frameborder="0"></iframe>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contacts">
+                <h2>Contact</h2>
+                <form class="inquiry-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; Copyright 2023 Kyle Hyun Woo Jung</p>
+        <div class="container">
+            <p>&copy; Copyright 2023 Kyle Hyun Woo Jung</p>
+        </div>
     </footer>
 </body>
 

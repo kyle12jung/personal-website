@@ -1,210 +1,173 @@
 * {
-
-}
-* {
-    font-family: 'Helvetica', 'Arial', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background-image: url("background.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 90vh;
-    opacity: 100%;
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
-button {
-  background-color: #fff;
-  border: 1px solid #d5d9d9;
-  border-radius: 8px;
-  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
-  box-sizing: border-box;
-  color: #0f1111;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Amazon Ember",sans-serif;
-  font-size: 13px;
-  line-height: 29px;
-  padding: 0 10px 0 11px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  width: 100px;
-}
-
-button:hover {
-  background-color: #f7fafa;
-}
-
-button:focus {
-  border-color: #008296;
-  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
-  outline: 0;
-}
-
-.navigation-container {
-    height: 40px;
+.container {
     width: 80%;
-    background-color: white;
-    padding-top: 20px;
-    margin-left: 10%;
+    margin: 0 auto;
+    padding-left: 20px; /* Added left padding */
+}
+
+.header {
+    background-color: #00496d;
+    color: white;
+    padding: 20px 0;
 }
 
 .navigation {
     display: flex;
     justify-content: space-around;
+    margin-top: 20px;
 }
 
-.navigation > a {
+.navigation a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s ease;
 }
 
-.header {
-}
-.main {
-    color: white;
-    font-weight: 800;
+.navigation a:hover {
+    color: #ffcc00;
 }
 
-.navigation-home {
-    margin-top: -100px;
-    margin-bottom: 200px;
+.about,
+.work-experience,
+.projects,
+.resume,
+.contact {
+    background-color: #f9f9f9;
+    padding: 40px;
 }
 
-.navigation-home a {
-    text-decoration: none;
-    color: white;
-    font-size: 40px;
-    margin-right: 20px;
+.about h2 {
+    margin-bottom: 40px; 
 }
 
-#main > h1 {
-    font-size: 100px;
-}
-
-#main > h3 {
-    font-size: 40px;
-}
-
-#main {
-    text-align: center;
-    padding-top: 13%;
-}
-
-
-
-// about page
-.main{
-
-}
-.about {
-    background-color: white;
-    width: 70%;
-    height: 80vh;
-    margin-left: 15%;
-    margin-top: 5%;
-}
 
 .bio {
-    padding: 40px;
+    display: flex;
+    align-items: center;
 }
 
 .bio-image {
-    width: 30%;
-    height: 30%;
-    margin-left: 35%;
+    flex: 1;
+    margin-right: 40px;
 }
 
 .bio-image > img {
-    width: 100%;
-    height: 100%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-// projects page
-.projects {
-
-}
-
-.projects {
-    background-color: white;
-    width: 70%;
-    height: 70vh;
-    margin-left: 15%;
-    margin-top: 5%;
-    padding: 20px;
-    overflow-y: auto;
-}
-
+.job,
 .project {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
 }
 
+.job:hover,
+.project:hover {
+    transform: scale(1.05);
+}
+
+.job img,
+.project img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.job-header,
+.project-header {
+    padding: 20px;
+}
+
+.job-description,
 .project-description {
-    display: none;
+    padding: 20px;
 }
 
-#quotepop {
-    width: 40%;
+.job button,
+.project button {
+    background-color: #00496d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#quotepop-button {
-    display: block;
-    margin-top: -100px;
+.job button:hover,
+.project button:hover {
+    background-color: #002233;
+    transform: scale(1.05);
 }
 
-#nu-eats {
-    width: 40%;
-}
-#nu-eats-button {
-    display: block;
-}
-
-
-// resume page
-.resume-embedded {
-}
-
-.resume-embedded {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.resume-embedded > iframe {
-    width: 70%;
+.resume iframe {
+    width: 100%;
     height: 90vh;
+    border: none;
 }
 
-// contacts page
-.contacts{
-
-}
-.contacts {
-    background-color: white;
-    width: 70%;
-    height: 70vh;
-    margin-left: 15%;
-    margin-top: 5%;
-    padding: 40px;
+.contacts h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-#contact-header {
-    font-weight: bold;
-    font-size: 20px;
+.inquiry-form {
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.inquiry-form > * {
+.inquiry-form label {
     display: block;
+    margin-bottom: 5px;
 }
 
-#inquiry-form-header {
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 70px;
+.inquiry-form input,
+.inquiry-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.inquiry-form button {
+    background-color: #00496d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.inquiry-form button:hover {
+    background-color: #002233;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #00496d;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
